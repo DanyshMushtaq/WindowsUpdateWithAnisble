@@ -1,0 +1,10 @@
+[web]
+54.215.130.234
+
+[web:vars]
+ansible_user=Administrator
+ansible_password="9CI4y)N7h(CxfF=F&vVY-SSXNWVxe6Ee"
+ansible_port=5986
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+

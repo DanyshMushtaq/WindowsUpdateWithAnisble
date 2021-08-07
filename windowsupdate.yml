@@ -1,0 +1,15 @@
+- name: Run Updates on Directory Servers then wait 15 mins
+  hosts: web
+  connection: winrm
+
+  tasks:
+  - name: Install all security updates with automatic reboots
+    win_file:
+       path: c:\temp\folder\subfolder1
+       state: directory
+  - name: Install all security, critical, and rollup updates
+    win_updates:
+     category_names:
+      - SecurityUpdates
+      - CriticalUpdates
+      - UpdateRollups
